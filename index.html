@@ -492,10 +492,14 @@
         }
 
         .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 3rem;
             margin-top: 4rem;
+            justify-content: center;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .product-card {
@@ -509,6 +513,8 @@
             overflow: hidden;
             opacity: 0;
             transform: translateY(30px);
+            width: 320px;
+            flex: 0 0 320px;
         }
 
         .product-card::before {
@@ -938,7 +944,12 @@
             }
 
             .products-grid {
-                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-card {
+                width: 280px;
+                flex: 0 0 280px;
             }
 
             .footer-content {
@@ -973,6 +984,16 @@
             .feature-card,
             .product-card {
                 padding: 1.5rem;
+            }
+
+            .products-grid {
+                gap: 1.5rem;
+            }
+
+            .product-card {
+                width: 260px;
+                flex: 0 0 260px;
+                height: auto;
             }
         }
 
@@ -1146,6 +1167,34 @@
                         <span><i class="fas fa-check"></i> Your Daily Hydration Goal</span>
                     </div>
                     <div class="product-price">₹240</div>
+                </div>
+            </div>
+            <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <h3>Sippure Cascade</h3>
+                    <p>5L Premium Water</p>
+                    <div class="product-features">
+                        <span><i class="fas fa-check"></i> Family Pack</span>
+                        <span><i class="fas fa-check"></i> Perfect for Group Use</span>
+                        <span><i class="fas fa-check"></i> Convenient Despensor Size</span>
+                    </div>
+                    <div class="product-price">₹75</div>
+                </div>
+            </div>
+            <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <h3>Sippure Oasis</h3>
+                    <p>20L Premium Water<br></p>
+                    <div class="product-features">
+                        <span><i class="fas fa-check"></i> Bulk Hydration Solution</span>
+                        <span><i class="fas fa-check"></i> Ultimate Value Pack</span>
+                        <span><i class="fas fa-check"></i> Convenient & Cost-Effective</span>
+                    </div>
+                    <div class="product-price">₹150</div>
                 </div>
             </div>
         </div>
