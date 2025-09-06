@@ -227,7 +227,8 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            /* 100vh replaced with fixed px (assumed viewport ~800px) */
+            min-height: 800px;
             background: #d0f5ff;
             display: flex;
             align-items: center;
@@ -243,7 +244,8 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            min-height: 80vh;
+            /* 80vh replaced with fixed px (80% of 800px = 640px) */
+            min-height: 640px;
         }
 
         .hero-content {
@@ -1042,7 +1044,7 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
                 <li class="social-links header-social" style="display:flex;  align-items:center;">
-                    <a href="https://www.facebook.com/sippurewater/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/share/1LfNe5zcKb" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
                     <a href="https://www.instagram.com/sippurewater/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                 </li>
             </ul>
@@ -1058,7 +1060,7 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content" style="display: contents;">
-                <div style="grid-column:1; display:flex; flex-direction:column; justify-content:center;">
+                <div style="display:flex; flex-direction:column; justify-content:center; min-height:540px;">
                     <h1 class="hero-title">Pure by nature, <span class="highlight">Purified by science</span></h1>
                     <p class="hero-description">Packaged drinking water, rigorously purified and bottled at source using multi‑stage treatment and 100% contact‑safe&nbsp;packaging</p>
                     <div class="hero-buttons">
@@ -1066,8 +1068,8 @@
                         <a href="#about" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
-                <div style="grid-column:2; display:flex; align-items:flex-start; justify-content:flex-end; height:100%;">
-                    <img src="Image for website.svg" alt="Sippure Hero Bottle" style="height:73vh; width:auto; object-fit:cover; object-position:right; display:block; margin-left:auto; margin-right:0; padding-right:0;">
+                <div style="display:flex; align-items:flex-start; justify-content:flex-end;">
+                    <img src="Image for website.svg" alt="Sippure Hero Bottle" style="height:540px; width:auto; object-fit:cover; object-position:right; display:block; margin-left:auto; margin-right:0; padding-right:0;">
                 </div>
             </div>
         </div>
