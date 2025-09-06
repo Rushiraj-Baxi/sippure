@@ -225,6 +225,32 @@
             transition: var(--transition);
         }
 
+        /* Mobile social icons (next to hamburger) */
+        .mobile-social {
+            display: none;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .mobile-social a {
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .mobile-social a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
         /* Hero Section */
         .hero {
             /* 100vh replaced with fixed px (assumed viewport ~800px) */
@@ -943,6 +969,15 @@
                 gap: 2rem;
             }
 
+            /* Show mobile social icons and hide header-social inside the slide-out menu */
+            .mobile-social {
+                display: flex;
+            }
+
+            .nav-menu .header-social {
+                display: none !important;
+            }
+
             /* Allow hero text to size naturally on smaller screens to avoid cropping */
             .hero-text-column {
                 min-height: auto;
@@ -1065,10 +1100,16 @@
                     <a href="https://www.instagram.com/sippurewater/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                 </li>
             </ul>
-            <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div class="mobile-social" aria-hidden="true">
+                    <a href="https://www.facebook.com/share/1LfNe5zcKb" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sippurewater/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -1086,7 +1127,7 @@
                     </div>
                 </div>
                 <div style="display:flex; align-items:flex-start; justify-content:flex-end;">
-                    <img src="Image for website.svg" alt="Sippure Hero Bottle" style="height:540px; width:auto; object-fit:cover; object-position:right; display:block; margin-left:auto; margin-right:0; padding-right:0;">
+                    <img src="Image for website.svg" alt="Sippure Hero Bottle" style="height:540px; width:auto; object-fit:cover; object-position:right; display:block; margin-left:auto; margin-right:0; padding-right:50px;">
                 </div>
             </div>
         </div>
