@@ -181,6 +181,7 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            align-items: center;
         }
 
         .nav-link {
@@ -235,7 +236,7 @@
         }
 
         .hero-container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 20px;
             display: grid;
@@ -556,10 +557,7 @@
         }
 
         .product-image {
-            font-size: 5rem;
-            color: var(--primary-color);
             margin-bottom: 1.5rem;
-            opacity: 0.8;
         }
 
         .product-card h3 {
@@ -619,6 +617,21 @@
             justify-content: center;
             opacity: 0.7;
             animation: rotate 10s linear infinite;
+        }
+
+        /* Align quality image to the right side of the left column so it sits closer to the content */
+        .quality-image {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .quality-visual img,
+        .quality-img {
+            width: 100%;
+            max-width: 320px;
+            display: block;
+            object-fit: contain;
         }
 
         @keyframes rotate {
@@ -890,6 +903,7 @@
                 transition: var(--transition);
                 box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
                 padding: 2rem 0;
+                align-items: center;
             }
 
             .nav-menu.active {
@@ -1027,6 +1041,10 @@
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
+                <li class="social-links header-social" style="display:flex;  align-items:center;">
+                    <a href="https://www.facebook.com/sippurewater/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sippurewater/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </li>
             </ul>
             <div class="nav-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -1048,8 +1066,8 @@
                         <a href="#about" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
-                <div style="grid-column:2; display:flex; align-items:center; justify-content:flex-end; height:100%;">
-                    <img src="Image for website.svg" alt="Sippure Hero Bottle" style="height:80vh; width:auto; object-fit:cover; object-position:right; display:block; margin-left:auto; margin-right:0;margin-bottom:95px; padding-right:0;">
+                <div style="grid-column:2; display:flex; align-items:flex-start; justify-content:flex-end; height:100%;">
+                    <img src="Image for website.svg" alt="Sippure Hero Bottle" style="height:77vh; width:auto; object-fit:cover; object-position:right; display:block; margin-left:auto; margin-right:0; padding-right:0;">
                 </div>
             </div>
         </div>
@@ -1103,9 +1121,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="water-drop">
-                        <i class="fas fa-tint"></i>
-                    </div>
+                    <video src="AdvVideo.mp4" autoplay muted loop playsinline style="width:100%; max-width:520px; border-radius:16px; object-fit:cover; display:block;"></video>
                 </div>
             </div>
         </div>
@@ -1119,7 +1135,7 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="250ml Labelled Design_page-0001.jpg" alt="Sippure Classic 250ml" style="height:160px; object-fit:contain;">
+                        <img src="250ml Labelled Design_page-0001.jpg" alt="Sippure Classic 250ml" style="height:200px; object-fit:contain;">
                     </div>
                     <h3>Sippure Classic</h3>
                     <p>250 ml Premium Water<br><span style="font-size:0.95em; color:#666;">(Pack of 48 Bottles)</span></p>
@@ -1133,7 +1149,7 @@
                 <div class="product-card featured">
                     <div class="popular-badge">Most Popular</div>
                     <div class="product-image">
-                        <img src="500ml Labelled Design_page-0001.jpg" alt="Sippure Aura 500ml" style="height:160px; object-fit:contain;">
+                        <img src="500ml Labelled Design_page-0001.jpg" alt="Sippure Aura 500ml" style="height:200px; object-fit:contain;">
                     </div>
                     <h3>Sippure Aura</h3>
                     <p>500 ml Premium Water<br><span style="font-size:0.95em; color:#666;">(Pack of 24 Bottles)</span></p>
@@ -1146,7 +1162,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="1L Labelled Design_page-0001.jpg" alt="Sippure Grande 1L" style="height:160px; object-fit:contain;">
+                        <img src="1L Labelled Design_page-0001.jpg" alt="Sippure Grande 1L" style="height:200px; object-fit:contain;">
                     </div>
                     <h3>Sippure Grande</h3>
                     <p>1L Premium Water<br><span style="font-size:0.95em; color:#666;">(Pack of 12 Bottles)</span></p>
@@ -1159,7 +1175,7 @@
                 </div>
                 <div class="product-card">
                         <div class="product-image">
-                        <img src="20L Sippure.jpg" alt="Sippure Oasis" style="height:160px; object-fit:contain;">
+                        <img src="20L Sippure.jpg" alt="Sippure Oasis" style="height:200px; object-fit:contain;">
                         </div>
                         <h3>Sippure Cascade</h3>
                         <p>5L Premium Water</p>
@@ -1172,7 +1188,7 @@
                 </div>
                 <div class="product-card">
                         <div class="product-image">
-                        <img src="20L Sippure.jpg" alt="Sippure Oasis" style="height:160px; object-fit:contain;">
+                        <img src="20L Sippure.jpg" alt="Sippure Oasis" style="height:200px; object-fit:contain;">
                         </div>
                         <h3>Sippure Oasis</h3>
                         <p>20L Premium Water<br></p>
@@ -1192,9 +1208,7 @@
         <div class="container">
             <div class="quality-content">
                 <div class="quality-image">
-                    <div class="quality-visual">
-                        <i class="fas fa-microscope"></i>
-                    </div>
+                        <img src="AdvImage.png" alt="Quality Visual" class="quality-img">
                 </div>
                 <div class="quality-text">
                     <h2 class="section-title">Our Quality Promise</h2>
@@ -1307,12 +1321,7 @@
                 <div class="footer-section">
                     <h3><i class="fas fa-tint"></i> Sippure</h3>
                     <p>Pure water for a pure life. Experience the difference with Sippure's premium packaged water.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                    <!-- social links moved to header -->
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
